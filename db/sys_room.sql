@@ -1,0 +1,12 @@
+INSERT INTO `sys_room` VALUES (19, '小教室 A-101', '0', 1, '06:00:00', '22:00:00');
+INSERT INTO `sys_room` VALUES (20, '小教室 A-102', '0', 1, '07:00:00', '23:00:00');
+INSERT INTO `sys_room` VALUES (21, '小教室 A-103', '0', 0, '07:00:00', '22:00:00');
+INSERT INTO `sys_room` VALUES (22, '小教室 A-104', '0', 1, '08:00:00', '00:00:00');
+INSERT INTO `sys_room` VALUES (23, '大教室 B-101', '1', 0, '07:00:00', '22:00:00');
+INSERT INTO `sys_room` VALUES (24, '大教室 B-102', '1', 1, '08:00:00', '23:00:00');
+INSERT INTO `sys_room` VALUES (25, '大教室 B-103', '1', 1, '00:00:00', '00:00:00');
+INSERT INTO `sys_room` VALUES (26, '大教室 B-104', '1', 1, '05:00:00', '23:00:00');
+INSERT INTO `sys_room` VALUES (27, '阅览室 C-101', '2', 1, '08:00:00', '22:00:00');
+INSERT INTO `sys_room` VALUES (28, '阅览室 C-102', '2', 0, '08:00:00', '21:00:00');
+INSERT INTO `sys_room` VALUES (29, '图书馆 D-1', '3', 1, '08:00:00', '22:00:00');
+INSERT INTO `sys_room` VALUES (30, '图书馆', '3', 1, '08:00:00', '22:00:00');
