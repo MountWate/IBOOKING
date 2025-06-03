@@ -558,9 +558,9 @@ CREATE TABLE `sys_user` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `sys_user` (`id`, `username`, `password`, `nickname`, `email`, `phone`, `address`, `create_time`, `avatar_url`, `role`, `defaults`) VALUES (1, 'admin', 'admin', '管理员', 'admin@qq.com', '13988888888', '复旦大学', '2023-04-14 13:36:46', 'http://localhost:8090/file/2355ecc3fed54895bcc29da5d9a2e090.png', 'ROLE_ADMIN', 3);
-INSERT INTO `sys_user` (`id`, `username`, `password`, `nickname`, `email`, `phone`, `address`, `create_time`, `avatar_url`, `role`, `defaults`) VALUES (5, 'xuzheng', '123456', '徐铮', '23210240335@m.fudan.edu.cn', '13413413413', '复旦大学', '2023-01-10 15:56:56', NULL, 'ROLE_USER', 0);
-INSERT INTO `sys_user` (`id`, `username`, `password`, `nickname`, `email`, `phone`, `address`, `create_time`, `avatar_url`, `role`, `defaults`) VALUES (11, 'wrs', '123456', '王睿思', '23210240326@m.fudan.edu.cn', '13124141341', '复旦大学计算机', '2023-08-17 17:21:42', NULL, 'ROLE_USER', 0);
-INSERT INTO `sys_user` (`id`, `username`, `password`, `nickname`, `email`, `phone`, `address`, `create_time`, `avatar_url`, `role`, `defaults`) VALUES (15, 'tyf', '123456', '田逸凡', '23212010026@m.fudan.edu.cn', '15380338027', '复旦大学', '2023-06-18 08:14:10', NULL, 'ROLE_USER', NULL);
+INSERT INTO `sys_user` (`id`, `username`, `password`, `nickname`, `email`, `phone`, `address`, `create_time`, `avatar_url`, `role`, `defaults`) VALUES (5, 'zhangkun', '123456', '张坤', '24210240407@m.fudan.edu.cn', '18134013571', '复旦大学', '2025-6-1 15:56:56', NULL, 'ROLE_USER', 0);
+INSERT INTO `sys_user` (`id`, `username`, `password`, `nickname`, `email`, `phone`, `address`, `create_time`, `avatar_url`, `role`, `defaults`) VALUES (11, 'wrs', '123456', '王睿思', '1@m.fudan.edu.cn', '1', '复旦大学计算机', '2023-08-17 17:21:42', NULL, 'ROLE_USER', 0);
+INSERT INTO `sys_user` (`id`, `username`, `password`, `nickname`, `email`, `phone`, `address`, `create_time`, `avatar_url`, `role`, `defaults`) VALUES (15, 'tyf', '123456', '田逸凡', '11@m.fudan.edu.cn', '1', '复旦大学', '2023-06-18 08:14:10', NULL, 'ROLE_USER', NULL);
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
