@@ -134,4 +134,14 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         save(user);
         return userDTO;
     }
+
+    public UserDTO register(UserDTO userDTO，String userName) {
+    //用户注册
+        User user = new User();
+        BeanUtil.copyProperties(userDTO, user, true);
+        // 默认角色ROLE_USER
+        user.setRole(userName);
+        save(user);
+        return userDTO;
+    }
 }
