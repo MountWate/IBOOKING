@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "16d8e6fa-c420-4f0c-a7ce-22f1cde7b0c5",
+		"name": "ibooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24245194"
+	},
+	"item": [
+		{
+			"name": "登陆",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0MzkyMjM0fQ.GOyDSDG9sGcw1599qXMZdUyqpHZUnbvDJ3AHsJSns5s",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"xwc\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://49.235.115.169:8090/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "查看预约",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0NDcwNTU3fQ.6FNvIZyXTMjqmjREevXQHmpL-VhJTk0R2RW7I0pC0Lw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://49.235.115.169:8090/reserve/check_reserve?pageNum=1&pageSize=2&id=1",
+					"protocol": "http",
+					"host": [
+						"49",
+						"235",
+						"115",
+						"169"
+					],
+					"port": "8090",
+					"path": [
+						"reserve",
+						"check_reserve"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"description": "user id or admin id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取消预约",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0NDcxNDYxfQ.NVCiRhwcSISQEUb3T3J6ycopV4nC64Cwj1n8TFAXABY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://49.235.115.169:8090/reserve/cancel_reserve"
+			},
+			"response": []
+		},
+		{
+			"name": "签到",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0NDcxNDYxfQ.NVCiRhwcSISQEUb3T3J6ycopV4nC64Cwj1n8TFAXABY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://49.235.115.169:8090/reserve/confirm_reserve"
+			},
+			"response": []
+		},
+		{
+			"name": "创建预约",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0NDcwNTU3fQ.6FNvIZyXTMjqmjREevXQHmpL-VhJTk0R2RW7I0pC0Lw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":2,\n    \"roomId\":1,\n    \"sitId\":1,\n    \"startTime\":\"2023-05-17 09:09:09\",\n    \"endTime\":\"2023-05-17 09:49:09\",\n    \"reservedTime\":\"2023-05-17 09:09:09\",\n    \"breakContract\":\"0\",\n    \"checkInTime\":\"0\",\n    \"cancle\":\"0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://49.235.115.169:8090/reserve/create_reserve"
+			},
+			"response": []
+		},
+		{
+			"name": "查看教室",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0NDcxNDYxfQ.NVCiRhwcSISQEUb3T3J6ycopV4nC64Cwj1n8TFAXABY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://49.235.115.169:8090/room/check_room?pageNum=1&pageSize=-1",
+					"protocol": "http",
+					"host": [
+						"49",
+						"235",
+						"115",
+						"169"
+					],
+					"port": "8090",
+					"path": [
+						"room",
+						"check_room"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查看教室内的座位",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0NDcxNDYxfQ.NVCiRhwcSISQEUb3T3J6ycopV4nC64Cwj1n8TFAXABY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://49.235.115.169:8090/room/check_sit?pageNum=1&pageSize=-1&id=1",
+					"protocol": "http",
+					"host": [
+						"49",
+						"235",
+						"115",
+						"169"
+					],
+					"port": "8090",
+					"path": [
+						"room",
+						"check_sit"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "-1"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新教室",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0NDcxNDYxfQ.NVCiRhwcSISQEUb3T3J6ycopV4nC64Cwj1n8TFAXABY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"name\":\"小教室\",\n    \"type\":\"0\",\n    \"available\":\"1\",\n    \"openTime\":\"05:00:00\",\n    \"closeTime\":\"22:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://49.235.115.169:8090/room/update_room"
+			},
+			"response": []
+		},
+		{
+			"name": "创建教室",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0NDcxNDYxfQ.NVCiRhwcSISQEUb3T3J6ycopV4nC64Cwj1n8TFAXABY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"小教室\",\n    \"type\":\"0\",\n    \"available\":\"1\",\n    \"openTime\":\"05:00:00\",\n    \"closeTime\":\"22:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://49.235.115.169:8090/room/create_room"
+			},
+			"response": []
+		},
+		{
+			"name": "删除教室",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0IiwiZXhwIjoxNjg0NDcxNDYxfQ.NVCiRhwcSISQEUb3T3J6ycopV4nC64Cwj1n8TFAXABY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":13\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://49.235.115.169:8090/room/delete_room"
+			},
+			"response": []
+		}
+	]
+}

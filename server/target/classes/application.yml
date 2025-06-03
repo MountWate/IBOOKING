@@ -1,0 +1,53 @@
+server:
+  port: 8090
+
+spring:
+  mail:
+    host: smtp.163.com
+    protocol: smtps
+    port: 465
+    username: ibooking7@163.com
+    password: UUCYFARLHGGFIBZW
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.177.21.118:3309/ibooking?serverTimezone=GMT%2b8
+    username: root
+    password: 114514
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #????mybatis?xml??
+#  configuration:
+#    map-underscore-to-camel-case: false
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    map-underscore-to-camel-case: false
+
+springdoc:
+  swagger-ui:
+    path: /api
+    disable-swagger-default-url: true
+    tags-sorter: alpha
+    operations-sorter: alpha
+    doc-expansion: none
+  api-docs:
+    enabled=false:
+  packagesToScan: com.example
+
+files:
+  upload:
+#    path: /Users/coder/Project/ibooking/files/
+    path: /home/ubuntu/syf/files/
