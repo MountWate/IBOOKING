@@ -33,7 +33,7 @@ public class RoleService extends ServiceImpl<RoleMapper, Role> {
         List<Integer> menuIdsCopy = CollUtil.newArrayList(menuIds);
         for (Integer menuId : menuIds) {
             Menu menu = menuService.getById(menuId);
-            // syf 补个嘚儿
+
 
             if (menu.getPid() != null && !menuIdsCopy.contains(menu.getPid())) { // 二级菜单 并且传过来的menuId数组里面没有它的父级id
                 // 那么我们就得补上这个父级id
