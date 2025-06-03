@@ -29,4 +29,14 @@ public class EmailSender {
 
         javaMailSender.send(message);  // 发送邮件
     }
+    
+    public void sendEmail(String recipient, String body) {
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("ibooking7@163.com");
+        message.setTo(recipient);     // 设置收件人
+        message.setText(body);        // 设置邮件内容
+
+        javaMailSender.send(message);  // 发送邮件
+    }
+
 }
